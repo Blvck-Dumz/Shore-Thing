@@ -335,13 +335,13 @@ function showTicket(fname, lname, email, dish, insta) {
   var ref = genRef(email + dish);
 
   document.getElementById('confirmTitle').textContent = 'You\'re officially on the Shore, ' + fname + '!';
-  document.getElementById('ticketName').textContent = fullName;
+  document.getElementById('ticketName').textContent = fname;
   document.getElementById('ticketRef').textContent = ref;
   document.getElementById('ticketDish').textContent = dish;
 
   document.getElementById('qrWrap').innerHTML = '';
   new QRCode(document.getElementById('qrWrap'), {
-    text: 'Shore Thing | ' + fullName + ' | ' + email + ' | ' + ref + ' | 20 Jun 2026 | Hove Lawns Brighton',
+    text: 'https://www.instagram.com/afrosummersplash',
     width: 92, height: 92,
     colorDark: '#1a1a2e', colorLight: '#ffffff',
     correctLevel: QRCode.CorrectLevel.M
